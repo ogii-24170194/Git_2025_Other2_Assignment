@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-	    <meta charset="UTF-8">
-	    <title>Quiz</title>
-	</head>
-	<body>
-		<script src="Quiz.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <title>チェックボックスクイズ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>クイズ：HTMLの正しい要素はどれ？（複数選択）</h2>
+
+  <form id="quizForm">
+    <label><input type="checkbox" name="answer" value="a"> &lt;div&gt;</label><br>
+    <label><input type="checkbox" name="answer" value="b"> &lt;dady&gt;</label><br>
+    <label><input type="checkbox" name="answer" value="c"> &lt;span&gt;</label><br>
+    <label><input type="checkbox" name="answer" value="d"> &lt;coffee&gt;</label><br><br>
+    
+    <button type="button" onclick="checkAnswer()">回答する</button>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <!-- 外部JavaScriptを読み込み -->
+  <script src="Quiz.js"></script>
+</body>
 </html>
